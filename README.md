@@ -18,7 +18,7 @@ $attr->get('target'); // => "_blank"
 $attr->has('target'); // => true
 $attr->toArray(); // => ['target' => '_blank']
 foreach ($attr as $k => $v) {
-	print $k . '=' . $v; // => "target = _blank"
+  print $k . '=' . $v; // => "target = _blank"
 }
 ```
 
@@ -41,8 +41,8 @@ $attr->toReadOnly(); // => TS\Data\Attributes\Attributes
 use TS\Data\Namespaced\Attributes;
 
 $attr = new Attributes([
-	'html::target' => '_blank', 
-	'other::foo' => 'bar'
+  'html::target' => '_blank', 
+  'other::foo' => 'bar'
 ]);
 
 // list used namespaces
@@ -63,8 +63,8 @@ $attr->extract('html', Attributes::KEEP_NAMESPACE)->toArray(); // => ['html::tar
 use TS\Data\MutableNamespaced\Attributes;
 
 $attr = new Attributes([
-	'html::target' => '_blank', 
-	'other::foo' => 'bar'
+  'html::target' => '_blank', 
+  'other::foo' => 'bar'
 ]);
 
 $attr->set('abc::foo', 'bar');
@@ -80,14 +80,14 @@ use TS\Data\Attributes\AttributesContainerInterface;
 use TS\Data\Attributes\AttributesContainerTrait;
 
 class My implements AttributesContainerInterface {
-	use AttributesContainerTrait;
-	public function __cosntruct($attrs) {
-		$this->initAttributes($attrs);
-	}
+  use AttributesContainerTrait;
+  public function __construct($attrs) {
+    $this->initAttributes($attrs);
+  }
 }
 
 $my = new My([
-	'target' => '_blank' 
+  'target' => '_blank' 
 ]);
 
 $my->hasAttribute('target'); // => true
@@ -102,14 +102,14 @@ use TS\Data\Attributes\Mutable\MutableContainerInterface;
 use TS\Data\Attributes\Mutable\MutableContainerTrait;
 
 class My implements MutableContainerInterface {
-	use MutableContainerTrait;
-	public function __cosntruct($attrs) {
-		$this->initAttributes($attrs);
-	}
+  use MutableContainerTrait;
+  public function __construct($attrs) {
+    $this->initAttributes($attrs);
+  }
 }
 
 $my = new My([
-	'target' => '_blank' 
+  'target' => '_blank' 
 ]);
 $my->setAttribute('foo', 'bar');
 ```
