@@ -1,0 +1,21 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"TS\\Data\\Attributes\\" : "src/"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"TS\\Data\\Attributes\\Tests\\" : "tests/"
+		}
+	},
+	"name" : "timostamm/data-attributes",
+	"type" : "library",
+	"license" : "AGPL-3.0",
+	"require" : {
+		"php" : ">=5.5.9"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "~6.3"
+	}
+}
