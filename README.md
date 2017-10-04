@@ -26,7 +26,7 @@ foreach ($attr as $k => $v) {
 ## Mutable Attributes Collection
 
 ```php
-use TS\Data\Mutable\Attributes;
+use TS\Data\Attributes\Mutable;
 
 $attr = new Attributes(['target' => '_blank']);
 $attr->set('foo', 'bar');
@@ -38,7 +38,7 @@ $attr->toReadOnly(); // => TS\Data\Attributes\Attributes
 ## Namespaced Attributes Collection
 
 ```php
-use TS\Data\Namespaced\Attributes;
+use TS\Data\Attributes\Namespaced;
 
 $attr = new Attributes([
   'html::target' => '_blank', 
@@ -60,7 +60,7 @@ $attr->extract('html', Attributes::KEEP_NAMESPACE)->toArray(); // => ['html::tar
 ## Mutable Namespaced Attributes Collection
 
 ```php
-use TS\Data\MutableNamespaced\Attributes;
+use TS\Data\Attributes\MutableNamespaced;
 
 $attr = new Attributes([
   'html::target' => '_blank', 
